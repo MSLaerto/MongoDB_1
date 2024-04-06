@@ -1,0 +1,10 @@
+db.system.js.save({
+    _id: "shuffle",
+    value: function(str) {
+        var arr = str.split('');
+        arr.sort(function() {
+            return 0.5 - Math.random();
+        });
+        return arr.join('');
+    }
+})
